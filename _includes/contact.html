@@ -1,16 +1,35 @@
-    <!-- Contact Section -->
-    <section id="contact" class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>Contact</h2>
-                <p>I'm currently in the process of developing a contact form. In the meantime, please contact me via one of the social network profiles linked below.</p>
-                <ul class="list-inline banner-social-buttons">
-                    {% for network in site.social %}
-                    <li>
-                        <a href="{{ network.url }}" class="btn btn-default btn-lg"><i class="fa fa-{{ network.title }} fa-fw"></i> <span class="network-name">{{ network.title }}</span></a>
-                    </li>
-                    {% endfor %}
-                </ul>
-            </div>
-        </div>
-    </section>
+<!-- Contact Section -->
+<section id="contact" class="container content-section text-center">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2">
+      <h2>Contact</h2>
+
+      <p>Please complete the form below to contact me.</p>
+
+      <form id="formaction" method="POST">
+        <input name="name" placeholder="Your name" type="text">
+        <br />
+        <input name="email" placeholder="Your email" type="email">
+        <br />
+        <textarea name="message" placeholder="Your message"></textarea>
+        <br />
+        <input type="text" name="_gotcha" style="display:none" />
+        <ul class="list-inline banner-social-buttons">
+          <li>
+            <button type="reset" value="Reset" class="btn-lg"><i class="fa fa-close fa-fw"></i> Reset</button>
+          </li>
+          <li>
+            <button type="submit" value="Submit" class="btn-lg"><i class="fa fa-send fa-fw"></i> Send</button>
+          </li>
+        </ul>
+      </form>
+
+      <p>Form powered by <a href="https://formspree.io/" rel="nofollow">FORMSPREE.IO</a></p>
+
+      <script>
+        var contactform =  document.getElementById('formaction');
+        contactform.setAttribute('action', 'http://formspree.io/' + 'stephenmitchell' + '-me-' + 'uk' + '@' + 'outlook' + '.' + 'com');
+      </script>
+    </div>
+  </div>
+</section>

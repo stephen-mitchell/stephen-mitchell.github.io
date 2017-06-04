@@ -400,3 +400,70 @@ h5.cv {
   letter-spacing: 1px;
   font-size: 19px;
 }
+
+/* Contact form */
+input, textarea {
+  color: black;
+  font-size: 18px;
+  margin: 0 0 25px;
+  width: 75%;
+  box-sizing: border-box;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 5px 5px 5px 5px;
+}
+
+textarea {
+  height: 300px
+}
+
+input::-moz-selection {
+    text-shadow: none;
+    background: #fcfcfc;
+    background: rgba(0,0,0,.2);
+}
+
+input::selection {
+    text-shadow: none;
+    background: #fcfcfc;
+    background: rgba(0,0,0,.2);
+}
+
+input:focus {
+  border: 2px solid {{ site.color.links }};
+}
+
+textarea::-moz-selection {
+    text-shadow: none;
+    background: #fcfcfc;
+    background: rgba(0,0,0,.2);
+}
+
+textarea::selection {
+    text-shadow: none;
+    background: #fcfcfc;
+    background: rgba(0,0,0,.2);
+}
+
+textarea:focus {
+  border: 2px solid {{ site.color.links }};
+}
+
+button {
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    border: 1px solid {{ site.color.links }};
+    color: {{ site.color.links }};
+    background-color: transparent;
+}
+
+button:hover {
+    border: 1px solid {{ site.color.links }};
+    outline: 0;
+    color: {{ site.color.primary-dark }};
+    background-color: {{ site.color.links }};
+}
