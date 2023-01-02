@@ -22,6 +22,8 @@ social:
     url: https://www.facebook.com/stephen.mitchell
   - title: github
     url: https://github.com/stephen-mitchell
+  - title: mastodon
+    url: https://yorkshire.social/@stephenmitchell
 
 # Build settings
 markdown: kramdown
